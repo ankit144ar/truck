@@ -1,1 +1,786 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Commercial Trucking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+<style>
+	@font-face {
+		font-family: "Ubuntu-Bold";
+		src: url('./fonts/Ubuntu/Ubuntu-Bold.woff2');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Ubuntu-Regular";
+		src: url('./fonts/Ubuntu/Ubuntu-Regular.woff2');
+		font-display: swap;
+	}
+    @font-face {
+		font-family: "Ubuntu-Medium";
+		src: url('./fonts/Ubuntu/Ubuntu-Medium.woff2');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Ubuntu-Light";
+		src: url('./fonts/Ubuntu/Ubuntu-Light.woff2');
+		font-display: swap;
+	}
+	.row{
+		display:flex;
+		flex-wrap:wrap;
+		width: 90%;
+		max-width: 1562px;
+		margin: 0 auto;
+	}
+.col{
+  --gutter:10px;
+  --col-strip-size: calc(calc(100% - calc(var(--gutter) * 11)) / 12);
+  --col-1-width: calc(calc(var(--col-strip-size) * 1) + calc(var(--gutter) * 0));
+  --col-2-width: calc(calc(var(--col-strip-size) * 2) + calc(var(--gutter) * 1));
+  --col-3-width: calc(calc(var(--col-strip-size) * 3) + calc(var(--gutter) * 2));
+  --col-4-width: calc(calc(var(--col-strip-size) * 4) + calc(var(--gutter) * 3));
+  --col-5-width: calc(calc(var(--col-strip-size) * 5) + calc(var(--gutter) * 4));
+  --col-6-width: calc(calc(var(--col-strip-size) * 6) + calc(var(--gutter) * 5));
+  --col-7-width: calc(calc(var(--col-strip-size) * 7) + calc(var(--gutter) * 6));
+  --col-8-width: calc(calc(var(--col-strip-size) * 8) + calc(var(--gutter) * 7));
+  --col-9-width: calc(calc(var(--col-strip-size) * 9) + calc(var(--gutter) * 8));
+  --col-10-width: calc(calc(var(--col-strip-size) * 10) + calc(var(--gutter) * 9));
+  --col-11-width: calc(calc(var(--col-strip-size) * 11) + calc(var(--gutter) * 10));
+  --col-12-width: calc(calc(var(--col-strip-size) * 12) + calc(var(--gutter) * 11));
+}
+.col:last-child{
+  margin:0;
+}
+.col-xs-1{
+  width: var(--col-1-width);
+  margin-right:var(--gutter);
+}
+.col-xs-2{
+  width: var(--col-2-width);
+  margin-right:var(--gutter);
+}
+.col-xs-3{
+  width: var(--col-3-width);
+  margin-right:var(--gutter);
+}
+.col-xs-4{
+  width: var(--col-4-width);
+  margin-right:var(--gutter);
+}
+.col-xs-5{
+  width: var(--col-5-width);
+  margin-right:var(--gutter);
+}
+.col-xs-6{
+  width: var(--col-6-width);
+  margin-right:var(--gutter);
+}
+.col-xs-7{
+  width: var(--col-7-width);
+  margin-right:var(--gutter);
+}
+.col-xs-8{
+  width: var(--col-8-width);
+  margin-right:var(--gutter);
+}
+.col-xs-9{
+  width: var(--col-9-width);
+  margin-right:var(--gutter);
+}
+.col-xs-10{
+  width: var(--col-10-width);
+  margin-right:var(--gutter);
+}
+.col-xs-11{
+  width: var(--col-11-width);
+  margin-right:var(--gutter);
+}
+.col-xs-12{
+  width: 100%;
+  margin-right:0;
+}
+@media only screen and (min-width:481px) {
+  .col{
+    --gutter:15px;
+  }
+  .col-sm-1{
+    width: var(--col-1-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-2{
+    width: var(--col-2-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-3{
+    width: var(--col-3-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-4{
+    width: var(--col-4-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-5{
+    width: var(--col-5-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-6{
+    width: var(--col-6-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-7{
+    width: var(--col-7-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-8{
+    width: var(--col-8-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-9{
+    width: var(--col-9-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-10{
+    width: var(--col-10-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-11{
+    width: var(--col-11-width);
+    margin-right:var(--gutter);
+  }
+  .col-sm-12{
+    width: 100%;
+    margin-right:0;
+  }
+}
+@media only screen and (min-width:768px) {
+  .col{
+    --gutter:20px;
+  }
+  .col-md-1{
+    width: var(--col-1-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-2{
+    width: var(--col-2-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-3{
+    width: var(--col-3-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-4{
+    width: var(--col-4-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-5{
+    width: var(--col-5-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-6{
+    width: var(--col-6-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-7{
+    width: var(--col-7-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-8{
+    width: var(--col-8-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-9{
+    width: var(--col-9-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-10{
+    width: var(--col-10-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-11{
+    width: var(--col-11-width);
+    margin-right:var(--gutter);
+  }
+  .col-md-12{
+    width: 100%;
+    margin-right:0;
+  }
+}
+@media only screen and (min-width:981px) {
+  .col{
+    --gutter:25px;
+  }
+  .col-lg-1{
+    width: var(--col-1-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-2{
+    width: var(--col-2-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-3{
+    width: var(--col-3-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-4{
+    width: var(--col-4-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-5{
+    width: var(--col-5-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-6{
+    width: var(--col-6-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-7{
+    width: var(--col-7-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-8{
+    width: var(--col-8-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-9{
+    width: var(--col-9-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-10{
+    width: var(--col-10-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-11{
+    width: var(--col-11-width);
+    margin-right:var(--gutter);
+  }
+  .col-lg-12{
+    width: 100%;
+    margin-right:0;
+  }
+}
+@media only screen and (min-width:1200px) {
+  .col{
+    --gutter:30px;
+  }
+  .col-xl-1{
+    width: var(--col-1-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-2{
+    width: var(--col-2-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-3{
+    width: var(--col-3-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-4{
+    width: var(--col-4-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-5{
+    width: var(--col-5-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-6{
+    width: var(--col-6-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-7{
+    width: var(--col-7-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-8{
+    width: var(--col-8-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-9{
+    width: var(--col-9-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-10{
+    width: var(--col-10-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-11{
+    width: var(--col-11-width);
+    margin-right:var(--gutter);
+  }
+  .col-xl-12{
+    width: 100%;
+    margin-right:0;
+  }
+}
+@media only screen and (min-width:1400px) {
+  .col{
+    --gutter:35px;
+  }
+  .col-xxl-1{
+    width: var(--col-1-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-2{
+    width: var(--col-2-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-3{
+    width: var(--col-3-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-4{
+    width: var(--col-4-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-5{
+    width: var(--col-5-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-6{
+    width: var(--col-6-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-7{
+    width: var(--col-7-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-8{
+    width: var(--col-8-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-9{
+    width: var(--col-9-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-10{
+    width: var(--col-10-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-11{
+    width: var(--col-11-width);
+    margin-right:var(--gutter);
+  }
+  .col-xxl-12{
+    width: 100%;
+    margin-right:0;
+  }
+} 
+h1, h2, h3, h4, h5, h6{
+	font-family: "Ubuntu-Bold";
+}
+p, li, a{
+	font-family: "Ubuntu-Regular";
+}
+.section-header {
+    background: #fff;
+    z-index: 90;
+}
+.primary-header,.primary-header nav{
+  width: 100%;
+}
+.primary-header ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+.primary-header ul li a{
+    text-decoration:none;
+    color:#000;
+    font-weight: 400;
+    font-family: 'Ubuntu-Regular';
+    font-size: 15px;
+    line-height: 17.24px;
+    width: 100%;
+}
+
+.primary-header ul .menu:first-child {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.section-header .row-1 {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+.section-header .row-1 .col-a {
+    text-align: left;
+}
+.section-header .row-1 .col-b #hamburger {
+    display: none;
+}
+.section-header .row-1 .col-b label {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.section-header .row-1 .col-b label span {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    display: block;
+    margin-bottom: 4px;
+}
+.section-header .row-1 .col-b #hamburger:checked + label + nav {
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.5s;
+}
+.section-header .row-1 .col-b label + nav {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    max-width: 1100px;
+    border-top: 3px solid;
+    top: 140px;
+    left: 0;
+    background: #fff;
+    z-index: 99;
+}
+.section-header .row-1 .col-b label + nav ul {
+    list-style-type: none;
+}
+.section-header .row-1 .col-b nav a {
+    font-size: 15px;
+    color: #141E30;
+    transition: all .5s;
+    padding: 15px 5%;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    line-height: 17.24px;
+}
+a.menu.btn-red, a.menu.btn-grey {
+    line-height: 18.38px;
+    font-size: 16px!important;
+    background: #C8102E;
+    color: #fff!important;
+    padding: 19px 33px !important;
+    border-radius: 60px;
+}
+a.menu.btn-grey{
+	background: #484747;
+}
+
+.section-hero .row-1{
+	align-items:center;
+}
+.section-hero .row-1 .col{
+	position: relative;
+}
+.section-hero .row-1 .col-a button{
+	font-size: 16px;
+    line-height: 18.38px;
+    font-family: "Ubuntu-Regular";
+    font-weight: 400;
+    background: #C8102E;
+    border: 0;
+    padding: 19px 33px;
+    border-radius: 60px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+}
+.section-header .row-1 .col-a img, .section-hero .row-1 .col-b img{
+    width:100%;
+    height:auto;
+}
+.section-hero .row-1 .col-a h2{
+    color: #C8102E;
+    font-size:18px;
+    line-height:20.68px;
+    margin:0;
+}
+.section-hero .row-1 .col-a h2 span {
+	border: 1px solid;
+    width: 43px;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 126px;
+}
+.section-hero .row-1 .col-a h2 span:after{
+    content:"";
+    width:8px;
+    height:8px;
+    background: #C8102E;
+    display: block;
+    position: absolute;
+    border-radius: 50px;
+    top: -4px;
+    left: 43px;
+}
+.section-hero .row-1 .col-a h1{
+    font-size:62px;
+    line-height:68px;
+    margin:10px 0;
+}
+.section-hero .row-1 .col-a h1 span {
+    color: #C8102E;
+    font-size:62px;
+    line-height:68px;
+}
+.section-hero .row-2 .slide {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 12px 30px;
+    z-index: 222;
+    position: relative;
+    background-color: #fff;
+}
+
+.section-hero .row-2 .slider {
+    box-shadow: 0px 4px 25px 0px #0000001F;
+    max-width: 307px;
+    border-radius: 5px;
+    position:relative;
+    margin: 40px 20px;
+}
+.slick-slider-2{
+  max-width: 1004px;
+  margin: 0 auto;
+}
+.section-hero .row-2 .col-a .slide-img img{
+    z-index: 9;
+    position: relative;
+}
+.section-hero .row-2 .col-a .slide-img:after{
+    content:"";
+    width: 49px;
+    height: 49px;
+    background: #F2F0F0;
+    display: block;
+    position: absolute;
+    border-radius: 50px;
+    top: 30px;
+    left: 10px;
+}
+.section-hero .row-2 .col-a .slider:after{
+    content:"";
+    width: 48px;
+    height: 48px;
+    background: #BD2941;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: -12px;
+    right: -12px;
+}
+@media (min-width: 768px){
+	.section-header .row-1 .col-b {
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: center;
+      flex-direction: column;
+	}
+}
+@media (min-width: 981px){
+	.section-header .row-1 .col-b label {
+	    display: none;
+	}
+	.section-header .row-1 .col-b label + nav {
+	    opacity: 1;
+	    visibility: visible;
+	    position: static;
+	    padding: 0;
+	    background: transparent;
+	    border-top: 0;
+	    width: 100%;
+	    box-shadow: none;
+	}
+	.section-header .row-1 .col-b label + nav ul {
+	    display: flex;
+	    justify-content: end;
+	    align-items: center;
+	    gap: 30px;
+	}
+	.section-header .row-1 .col-b label + nav a {
+	    width: max-content;
+	    border-bottom: 0;
+	}
+	.section-header .row-1 .col-b nav a {
+	    font-size: 15px;
+	    color: #000;
+	    transition: all .5s;
+	    padding: 15px 5%;
+	    display: block;
+	    text-decoration: none;
+	    border-bottom: none;
+	}
+	.section-header .row-1 .col-b nav a:hover {
+	    color: #E60C0C;
+	}
+}
+</style>
+
+
+</head>
+<body>
+	<header class="section section-header" id="navbar">
+    <div class="row row-1">
+        <div class="col-xs-4 col-a">
+            <a href="#"><img src="./assets/logo.png" alt="image" width="184" height="124"> </a>
+        </div>
+        <div class="col-xs-8 col-b">
+          <div class="primary-header">
+            <nav>
+              <ul>
+                  <li><a class="menu" href="#"><img src="./assets/phone-logo.png" alt="image" width="16" height="16">618-657-7525</a></li>
+                  <li><a class="menu" href="#">Industry News</a></li>
+                  <li><a class="menu" href="#">Affiliates</a></li>
+                  <li><a class="menu" href="#">Contact</a></li>
+                 </ul>
+             </nav>
+          </div>
+          <div class="secondary-header">
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger"><span></span><span></span><span></span></label>
+            <nav>
+                <ul>
+                    <li><a class="menu" href="#">Solutions <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;height:14px;fill:#777;margin-left:3px;position:relative;top:2px;" viewBox="0 0 384 512"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"></path></svg></a></li>
+                    <li><a class="menu" href="#">How it works</a></li>
+                    <li><a class="menu" href="#">Trucking Insurance Tips</a></li>
+                    <li><a class="menu" href="#">Meet Us</a></li>
+                    <li><a class="menu btn-red" href="#">Get A Quote</a></li>
+                    <li><a class="menu btn-grey" href="#">24/7 COI</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="section section-hero">
+	<div class="row row-1">
+		<div class="col col-xs-12 col-md-6 col-a">
+		    <h2>// Welcome to <span></span></h2>
+		    <h1>The easiest way to buy and <span>manage trucking insurance</span></h1>
+		    <button>Get Instant Quotes</button>	
+		</div>
+		<div class="col col-xs-12 col-md-6 col-b">
+			<img src="./assets/mask-group.png" alt="image" width="717" height="560">
+		</div>
+	</div>
+	<div class="row row-2">
+		<div class="col-xs-12 col-a">
+			<div class="slick-slider-2">
+        <div class="slider">
+					<div class="slide">
+						<div class="slide-img">
+							<img src="./assets/calender.png" alt="calender" width="33" height="36">
+						</div>
+						<div class="slide-text">
+							<h3>24/7 COI Service</h3>
+							<p>Get Proof of Insurance on your time! No wait or hassle!</p>
+						</div>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slide">
+						<div class="slide-img slide-img2">
+							<img src="./assets/quotes.png" alt="calender" width="43" height="37">
+						</div>
+						<div class="slide-text">
+							<h3>24/7 COI Service</h3>
+							<p>Get Proof of Insurance on your time! No wait or hassle!</p>
+						</div>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slide">
+						<div class="slide-img slide-img3">
+							<img src="./assets/payment.png" alt="calender" width="46" height="38">
+						</div>
+						<div class="slide-text">
+							<h3>24/7 COI Service</h3>
+							<p>Get Proof of Insurance on your time! No wait or hassle!</p>
+						</div>
+					</div>
+				</div>
+        <div class="slider">
+					<div class="slide">
+						<div class="slide-img">
+							<img src="./assets/calender.png" alt="calender" width="33" height="36">
+						</div>
+						<div class="slide-text">
+							<h3>24/7 COI Service</h3>
+							<p>Get Proof of Insurance on your time! No wait or hassle!</p>
+						</div>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slide">
+						<div class="slide-img slide-img2">
+							<img src="./assets/quotes.png" alt="calender" width="43" height="37">
+						</div>
+						<div class="slide-text">
+							<h3>24/7 COI Service</h3>
+							<p>Get Proof of Insurance on your time! No wait or hassle!</p>
+						</div>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slide">
+						<div class="slide-img slide-img3">
+							<img src="./assets/payment.png" alt="calender" width="46" height="38">
+						</div>
+						<div class="slide-text">
+							<h3>24/7 COI Service</h3>
+							<p>Get Proof of Insurance on your time! No wait or hassle!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</section>
+
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+      jQuery('.slick-slider-2').slick({
+          dots: true,
+          infinite: true,
+          arrows: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: false,
+          draggable:true,
+          autoplaySpeed: 2000,
+          responsive: [
+            {
+                  breakpoint: 2000,
+                  settings: {
+                      slidesToShow: 3
+                  }
+              },
+              {
+                  breakpoint: 768,
+                  settings: {
+                      slidesToShow: 2
+                  }
+              },
+              {
+                  breakpoint: 480,
+                  settings: {
+
+                      slidesToShow: 1
+                  }
+              }
+          ]
+      });
+  });
+</script>
+</body>
+</html>
